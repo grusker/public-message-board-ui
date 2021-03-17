@@ -1,0 +1,16 @@
+<div class="row">
+  <a class="btn btn-primary" routerLink="/messages">Back to List</a>
+</div>
+<div class="container">
+  <form [formGroup]="messageForm" (ngSubmit)="updateMessage()">
+    <div *ngIf="validMessage != ''">
+      <h3 class="has-info">{{validMessage}}</h3>
+    </div>
+    <div class="form-group">
+      <label>Message Content</label>
+      <input type="text" class="form-control" formControlName="content" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>

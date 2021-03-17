@@ -1,0 +1,16 @@
+<div class="container">
+    <form [formGroup]="messageForm" (ngSubmit)="login()">
+        <div *ngIf="validMessage != ''">
+            <h3 class="has-info">{{validMessage}}</h3>
+        </div>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" formControlName="username" required autofocus />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" formControlName="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>

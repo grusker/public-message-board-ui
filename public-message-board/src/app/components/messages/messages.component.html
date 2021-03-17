@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="link-column">
+    <a class="btn btn-primary" routerLink="/">Home</a>
+  </div>
+  <div class="link-column">
+    <a class="btn btn-primary" routerLink="/create">Create Message</a>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Id</th>
+      <th>Content</th>
+      <th>Create User</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let message of messages">
+      <td>
+        <a [routerLink]="['/edit', message.id]">{{message.id}}</a>
+      </td>
+      <td>
+        {{message.content}}
+      </td>
+      <td>
+        {{message.createUserName}}
+      </td>
+      <td>
+        <button type="button" class="btn deleteButton" (click)="deleteMessage(message.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

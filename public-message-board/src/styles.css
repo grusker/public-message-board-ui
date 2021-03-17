@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    height: 100%;
+  }
+  
+  body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-rendering: optimizeLegibility;
+    position: relative;
+    min-height: 100%;
+    font-family: 'Courier New', sans-serif;
+    font-weight: normal;
+    font-size: 1.5em;
+    background: white;
+  }
+  
+  h1 {
+    font-size: 2.0em;
+  }
+  
+  .table-bordered, .table-bordered td, .table-bordered th {
+    border: 1px solid #2F465D;
+  }
+
+  .has-info {
+    color: red;
+  }
+
+  .deleteButton {
+    color: red;
+  }
+
+  .link-column {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline;
+  }
+  

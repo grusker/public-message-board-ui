@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+   web:
+      image: gruske/public-message-board-ui
+      ports:
+         - "4200:4200"
+
+   api:
+      image: gruske/public-message-board
+      ports:
+         - "8080:8080"

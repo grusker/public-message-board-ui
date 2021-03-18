@@ -1,15 +1,15 @@
 {
-    "/server": {
-      "target": {
-        "host": "api",
-        "port": 8080,
-        "protocol": "http"
-      },
-      "secure": false,
-      "changeOrigin": true,
-      "logLevel": "debug",
-      "pathRewrite": {
-        "^/server" : ""
-      }
+  "/server": {
+    "target": {
+      "host": "api",
+      "port": 8080,
+      "protocol": "http"
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/server": ""
     }
-  } 
+  }
+}

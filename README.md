@@ -7,7 +7,7 @@ The project was generated with [Angular CLI](https://github.com/angular/angular-
 
 ## How to run
 
-In the root directory of this repository, there is a docker-compose.yml file. In a terminal, navigate to the same folder with this file and run the command below.
+In the root directory of this repository, there is a docker-compose.yml file. Create a copy of this file in your local computer. In a terminal, navigate to the same folder with this file and just run the command below.
 
 ````docker-compose up````
 

@@ -1,27 +1,46 @@
 # PublicMessageBoard
+Coding challenge - A Public Message Board
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+This is a simple UI project to show the functionality of the project in my `public-message-board` repository.
 
-## Development server
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+###How to run
 
-## Code scaffolding
+In the root directory of this repository, there is a docker-compose.yml file. In a terminal, navigate to the same folder with this file and run the command below.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+````docker-compose up````
 
-## Build
+This will download the images for both backend and frontend application (if they don't exist in your local machine) and run them. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Navigate ``http://localhost:4200/`` in your browser and you can start to use the application.
 
-## Running unit tests
+<br/>
+You can access/download the docker image via the link below.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+``https://hub.docker.com/repository/docker/gruske/public-message-board-ui``
 
-## Running end-to-end tests
+If you still want to build it yourself, project has a Dockerfile. Just run the command below:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+``docker build -t gruske/public-message-board-ui .``
 
-## Further help
+##Without docker images
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you want to run the application in your local computer, clone this repo and change proxy.conf.json file like this.
+
+````
+{
+  "/server": "http://localhost:8080",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/server": ""
+    }
+  }
+}
+````
+
+Then run the application with `npm start` and navigate to `http://localhost:4200/`.
+
+To make the UI work, also run the backend application in my `public-message-board` repository. You may find the instructions in README.md file of the project.

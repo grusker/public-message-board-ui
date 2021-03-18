@@ -5,7 +5,7 @@ This is a simple UI project to show the functionality of the project in my `publ
 
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
-###How to run
+## How to run
 
 In the root directory of this repository, there is a docker-compose.yml file. In a terminal, navigate to the same folder with this file and run the command below.
 
@@ -24,7 +24,7 @@ If you still want to build it yourself, project has a Dockerfile. Just run the c
 
 ``docker build -t gruske/public-message-board-ui .``
 
-##Without docker images
+## Without docker images
 
 If you want to run the application in your local computer, clone this repo and change proxy.conf.json file like this.
 
